@@ -1,7 +1,6 @@
-package com.alevieira.dslist.model;
+package com.alevieira.dslist.models;
 
 import jakarta.persistence.*;
-import org.w3c.dom.Text;
 
 import java.util.Objects;
 
