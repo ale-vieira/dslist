@@ -1,9 +1,11 @@
 package com.alevieira.dslist.controllers;
 
+import com.alevieira.dslist.dtos.GameDto;
 import com.alevieira.dslist.dtos.GameMinDto;
 import com.alevieira.dslist.services.GameService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -20,5 +22,11 @@ public class GameController {
     public List<GameMinDto> findAll(){
         List<GameMinDto> result = gameService.findAll();
         return  result;
+    }
+
+    @GetMapping("/{id}")
+    public GameDto findById(@PathVariable Long id) {
+        GameDto result = gameService.findById(id);
+        return result;
     }
 }
