@@ -6,7 +6,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name="tb_game")
-public class Game {
+public class GameModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -22,11 +22,11 @@ public class Game {
     @Column(columnDefinition = "TEXT")
     private String longDescription;
 
-    public Game(){
+    public GameModel(){
 
     }
 
-    public Game(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl, String shortDescription, String longDescription) {
+    public GameModel(Long id, String title, Integer year, String genre, String platforms, Double score, String imgUrl, String shortDescription, String longDescription) {
         this.id = id;
         this.title = title;
         this.year = year;
@@ -114,8 +114,8 @@ public class Game {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Game game = (Game) o;
-        return id.equals(game.id);
+        GameModel gameModel = (GameModel) o;
+        return id.equals(gameModel.id);
     }
 
     @Override

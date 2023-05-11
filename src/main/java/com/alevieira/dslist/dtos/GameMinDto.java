@@ -1,10 +1,6 @@
 package com.alevieira.dslist.dtos;
 
-import com.alevieira.dslist.models.Game;
-import jakarta.persistence.Column;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import com.alevieira.dslist.models.GameModel;
 
 public class GameMinDto {
 
@@ -19,7 +15,7 @@ public class GameMinDto {
 
     }
 
-    public GameMinDto(Game entity) {
+    public GameMinDto(GameModel entity) {
         id = entity.getId();
         title = entity.getTitle();
         year = entity.getYear();
